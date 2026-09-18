@@ -1,3 +1,6 @@
+# Don't allow local VS Code settings.
+/.vscode/settings.json
+
 # Don't allow video files. https://en.wikipedia.org/wiki/Video_file_format
 *.avi
 *.m4v

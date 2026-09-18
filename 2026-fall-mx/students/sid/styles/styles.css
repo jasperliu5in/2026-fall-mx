@@ -1,0 +1,8 @@
+body {
+    background-color: light-dark(white,black);
+    color: light-dark(black,white) ;
+}
+footer{
+    background-color: rgb(90, 184, 206);
+    color:rgb(4, 79, 144) ;
+}
