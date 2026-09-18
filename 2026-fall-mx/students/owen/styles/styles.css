@@ -1,0 +1,9 @@
+body {
+    background-color: light-dark(blue, orange);
+    color: light-dark(yellow, yellow);
+}
+
+footer {
+    background-color: light-dark(orange, aqua);
+    color: light-dark(aqua, blue);
+}

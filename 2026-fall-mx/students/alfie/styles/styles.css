@@ -1,0 +1,13 @@
+
+body {
+    background-color: light-dark(rgba(95, 158, 160, 0.334), cadetblue);
+}
+
+h1 {
+    color: light-dark( red, rgb(232, 232, 255));
+}
+
+
+footer {
+    background-color: light-dark(rgb(197, 216, 206), rgb(206, 206, 234));
+}

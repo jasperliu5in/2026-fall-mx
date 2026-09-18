@@ -1,0 +1,9 @@
+body {
+    background-color: light-dark(rgb(250, 189, 239), rgb(2, 32, 70));
+    color: light-dark(rgb(39, 41, 42), rgb(203, 226, 255));
+}
+
+footer {
+    background-color: light-dark(rgb(117, 233, 248), rgb(71, 89, 110));
+    color: light-dark(rgb(16, 16, 16), rgb(234, 236, 239));
+}

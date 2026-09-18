@@ -1,0 +1,1 @@
+const key = 'color-scheme-choice';

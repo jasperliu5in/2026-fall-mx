@@ -1,0 +1,52 @@
+/**
+ * Hide elements visually, but keep them available for screen reader software.
+ *
+ * Used for information required for screen reader users to understand and use
+ * the site where visual display is not wanted.
+ */
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+/**
+ * Styles to make the color scheme chooser easier to use.
+ */
+.color-scheme-chooser {
+  --radius: 1.5em;
+  --padding: 3px;
+  --border-width: 2px;
+
+  display: inline-block;
+  /* Rounded borders makes the widget look mis-aligned unless shifted a bit. */
+  margin-inline-start: -3px;
+  padding: var(--padding);
+  border: var(--border-width) solid #ccc;
+  border-radius: var(--radius);
+
+  label {
+    display: inline-flex;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+    text-align: center;
+    border-radius: calc(var(--radius) - var(--padding));
+
+    &:has(input:checked) {
+      color: #333;
+      background-color: #ccc;
+    }
+
+    &:focus-within {
+      outline: var(--border-width) solid light-dark(#333, #fff);
+    }
+  }
+
+  /* Hide the chooser on older browsers. */
+  @supports not (color: light-dark(black, white)) {
+    display: none;
+  }
+}

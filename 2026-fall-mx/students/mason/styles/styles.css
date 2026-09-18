@@ -1,0 +1,10 @@
+body {
+    background-color: light-dark(aqua, hotpink);
+    color:blue;
+}
+
+footer {
+    background-color:black;
+    color:aliceblue
+}
+

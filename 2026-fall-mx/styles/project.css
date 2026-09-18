@@ -1,5 +1,6 @@
 :root {
   --5in-gap: 20px;
+  --5in-color-orange: #ff6600;
 }
 
 body {
@@ -7,14 +8,41 @@ body {
   padding: 0;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: light-dark(white, black);
+  color: light-dark(black, white);
 }
 
 a {
-  color: #ff6600;
+  color: var(--5in-color-orange);
 }
 
 .header {
   margin-bottom: calc(2 * var(--5in-gap));
+}
+
+.header__logo {
+  --offset: 5px;
+  --logo: 80px;
+
+  position: relative;
+  vertical-align: baseline;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    left: calc(-1 * var(--offset));
+    top: calc(-1 * var(--offset));
+    background-color: #fff;
+    width: calc(var(--logo) + 2 * var(--offset));
+    height: calc(var(--logo) + 2 * var(--offset));
+  }
+
+  img {
+    width: var(--logo);
+    height: var(--logo);
+  }
 }
 
 .big {
@@ -22,6 +50,7 @@ a {
 }
 
 .footer {
+  color-scheme: dark;
   margin-top: calc(2 * var(--5in-gap));
   padding-block: var(--5in-gap);
   background: linear-gradient(to bottom, #000, #000 5px, #444 5px, #000);
