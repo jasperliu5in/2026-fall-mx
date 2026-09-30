@@ -4,7 +4,7 @@ body {
 }
 
 footer {
-    background-color: light-dark(white, black);
+    background-color: light-dark(white, darkgray);
     color: light-dark( black, white);
 }
 
@@ -12,4 +12,17 @@ footer {
     width: 960px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#color-chooser {
+    border: 3px solid purple;
+
+    input{
+        display: none;
+    }
+
+    label:has(input:checked) {
+        color: darkgray;
+        background-color: purple;
+    }
 }
