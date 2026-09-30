@@ -1,10 +1,10 @@
 body {
-    background-color: light-dark(lightblue, darkblue);
+    background-color: light-dark(white, darkgray);
     color: light-dark( black, white);
 }
 
 footer {
-    background-color: light-dark(red, darkred);
+    background-color: light-dark(white, black);
     color: light-dark( black, white);
 }
 
