@@ -1,19 +1,80 @@
 :root {
   --5in-gap: 20px;
-  --5in-color-orange: #ff6600;
+  --5in-color-brand-orange: #ff6600;
+  --5in-color-brand-orange-dark: oklch(0.75 0.2043 43.49);
+  --5in-color-brand-orange-light: oklch(0.9 0.2043 43.49);
+  --5in-link-color: light-dark(
+    var(--5in-color-brand-orange),
+    var(--5in-color-brand-orange-dark)
+  );
 }
 
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
   background-color: light-dark(white, black);
   color: light-dark(black, white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  text-transform: uppercase;
 }
 
 a {
-  color: var(--5in-color-orange);
+  --link-hover-height: 2px;
+  color: var(--5in-link-color);
+  background: linear-gradient(
+      to right,
+      var(--5in-link-color),
+      light-dark(
+        var(--5in-color-brand-orange-light),
+        var(--5in-color-brand-orange)
+      )
+    )
+    no-repeat right bottom / 0 var(--link-hover-height);
+  transition-property: background-size, color;
+  transition-duration: 350ms;
+  text-decoration: none;
+}
+
+a:where(:hover, :focus-visible) {
+  color: light-dark(black, white);
+  background-size: 100% var(--link-hover-height);
+  background-position-x: left;
+}
+
+img {
+  max-width: 100%;
 }
 
 .header {
@@ -54,11 +115,7 @@ a {
   margin-top: calc(2 * var(--5in-gap));
   padding-block: var(--5in-gap);
   background: linear-gradient(to bottom, #000, #000 5px, #444 5px, #000);
-  color: white;
-
-  a {
-    color: oklch(77.132% 0.14535 52.644);
-  }
+  color: light-dark(black, white);
 }
 
 body:has(> .footer) {

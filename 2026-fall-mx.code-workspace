@@ -9,6 +9,8 @@
     "emmet.excludeLanguages": [
       "markdown",
       "html"
-    ]
+    ],
+    "editor.wordWrapIndicator": true,
+    "editor.wordWrap": "on"
   }
 }

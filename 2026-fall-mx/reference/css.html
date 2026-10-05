@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Coding Reference: 5IN Experimental Education Institute Taipei</title>
+    <link rel="stylesheet" href="/2026-fall-mx/styles/project.css" />
+    <link rel="stylesheet" href="/2026-fall-mx/styles/shared.css" />
+    <link rel="stylesheet" href="/2026-fall-mx/styles/reference.css" />
+    <link rel="icon" href="/2026-fall-mx/favicon.png" />
+    <meta name="color-scheme" content="light dark" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="center line">
+        <div class="big line">
+          <span class="header__logo">
+            <img src="/2026-fall-mx/images/logo-5in.png" alt="5in" width="80" />
+          </span>
+          <b>5IN</b>
+        </div>
+        <nav class="line">
+          <a href="/2026-fall-mx/">Home</a>
+          <a href="/2026-fall-mx/reference/">Coding Reference</a>
+          <a href="/2026-fall-mx/#students">Students</a>
+          <a href="/2026-fall-mx/#teachers">Teachers</a>
+          <a href="/2026-fall-mx/#github">GitHub accounts</a>
+        </nav>
+      </div>
+    </header>
+    <main class="center">
+      <nav id="nav" aria-labelledby="reference">
+        <h2 id="reference">Coding Reference</h2>
+        <p>
+          Here is a list of everything the Mixed Grade class has been taught.
+        </p>
+
+        <p>
+          <a href="./#nav">HTML</a> | <a href="#css">CSS</a> |
+          <a href="./javascript.html#nav">JavaScript</a>
+        </p>
+      </nav>
+
+      <h1 id="css">CSS Reference</h1>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#basics">CSS Basics</a>
+            <ul>
+              <li><a href="#ruleset">Ruleset</a></li>
+              <li><a href="#nested">Nested Statement</a></li>
+              <!-- <li>Selector structure
+              <ul>
+                <li>Simple selector</li>
+                <li>Compound selector
+                  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector
+                </li>
+                <li>Complex selector
+                  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#complex_selector
+                </li>
+                <li>Selector list
+                  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#selector_list
+                </li>
+                <li>Relative selector
+                  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#relative_selector
+                </li>
+              </ul>
+            </li> -->
+            </ul>
+          </li>
+          <li>
+            CSS Syntax
+            <ul>
+              <li><a href="#selectors">CSS Selectors</a></li>
+              <li><a href="#properties">CSS Properties</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <h2 id="basics">CSS Basics</h2>
+      <dl>
+        <dt id="ruleset">
+          CSS rule (or CSS ruleset)
+          <code> selector { property: value; } </code>
+        </dt>
+        <dd>
+          <p>A set of styles that apply to one selection of HTML.</p>
+
+          <p>Example:</p>
+          <pre><code>h1 {
+  color: red;
+  font-size: 2.5em;
+}</code></pre>
+
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_rulesets"
+              >MDN Reference</a
+            >
+          </p>
+        </dd>
+        <dt>Nested statement <code> selector1 { selector2 {} } </code></dt>
+        <dd>
+          <pre><code>/* Style all h1 elements */
+h1 {
+  color: red;
+  font-size: 2.5rem;
+
+  /* Style small elements that are inside an h1 element */
+  small {
+    font-size: 1rem;
+  }
+}</code></pre>
+        </dd>
+      </dl>
+
+      <h2 id="selectors">CSS Selectors</h2>
+
+      <dl>
+        <dt>Type selector <code>tag {}</code></dt>
+        <dd>
+          <p>
+            The CSS <strong>type selector</strong> matches HTML elements by
+            name.
+          </p>
+          <p>Examples:</p>
+          <pre><code>/* Styles all p elements. */
+p { margin-block: 20px; }
+
+/* Styles all h1 elements. */
+h1 { margin-block: 20px 10px; }</code></pre>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors"
+              >MDN Reference
+              <span class="visually-hidden">for type selectors</span></a
+            >
+          </p>
+        </dd>
+
+        <dt>Class selector <code>.class {}</code></dt>
+        <dd>
+          <p>
+            The CSS <strong>class selector</strong> matches elements based on
+            the contents of their class attribute.
+          </p>
+          <p>Examples:</p>
+          <pre><code>/* All elements with class="spacious" */
+.spacious {
+  margin: 2em;
+}
+
+/* All &lt;li&gt; elements with class="spacious" */
+li.spacious {
+  margin: 2em;
+}
+
+/* All &lt;li&gt; elements with a class list that
+   includes both "spacious" and "elegant".
+   For example, &lt;li class="elegant retro spacious"&gt; */
+li.spacious.elegant {
+  margin: 2em;
+}</code></pre>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Class_selectors"
+              >MDN Reference
+              <span class="visually-hidden">for class selectors</span></a
+            >
+          </p>
+        </dd>
+
+        <!-- <dt>Attribute selector <code>selector {}</code></dt>
+        <dd>
+          <pre><code>/* Style &lt;a&gt; elements with a title attribute */
+a[title] {
+  color: purple;
+}</code></pre>
+
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors"
+              >MDN Reference
+              <span class="visually-hidden">for attribute selectors</span></a
+            >
+          </p>
+        </dd> -->
+
+        <dt>ID selector <code>#id {}</code></dt>
+        <dd>
+          <pre><code>/* Style the element with an id attribute of "movie".
+   For example, &lt;article id="movie"&gt; */
+#movie {
+  color: purple;
+}</code></pre>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors"
+              >MDN Reference
+              <span class="visually-hidden">for class selectors</span></a
+            >
+          </p>
+        </dd>
+
+        <dt>Universal selector <code>* {}</code></dt>
+        <dd>
+          <pre><code>/* Style all html elements. */
+* {
+  color: purple;
+}</code></pre>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors"
+              >MDN Reference
+              <span class="visually-hidden">for universal selectors</span></a
+            >
+          </p>
+        </dd>
+
+        <dt>Nested selector <code> selector1 { selector2 {} } </code></dt>
+        <dd>
+          <pre><code>/* Style all h1 elements */
+h1 {
+  color: red;
+  font-size: 2.5rem;
+
+  /* Style small elements that are inside an h1 element */
+  small {
+    font-size: 1rem;
+  }
+}</code></pre>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector"
+              >MDN Reference
+              <span class="visually-hidden">for nesting selectors</span></a
+            >
+          </p>
+        </dd>
+      </dl>
+
+      <p>
+        <a href="#nav" class="backToTop">Back to top</a>
+      </p>
+
+      <h2 id="properties">CSS Properties</h2>
+
+      <dl>
+        <dt id="fonts">Fonts</dt>
+        <dd>
+          <a href="https://fonts.google.com">Google fonts</a>
+        </dd>
+
+        <dt id="gradient">Gradients <code>linear-gradient()</code></dt>
+        <dd>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient"
+              >MDN Reference</a
+            >
+          </p>
+          <p>
+            <a href="https://cssgradient.io"
+              >gradient design tool at cssgradient.io</a
+            >
+          </p>
+        </dd>
+      </dl>
+
+      <p>
+        <a href="#nav" class="backToTop">Back to top</a>
+      </p>
+    </main>
+    <footer class="footer">
+      <div class="center line">
+        <div>
+          <p>Last updated: 2026 October 5</p>
+          <p>
+            Code:
+            <a href="https://github.com/5in-tw/2026-fall-mixed">GitHub</a>
+          </p>
+        </div>
+
+        <fieldset id="color-chooser" class="color-scheme-chooser">
+          <legend class="visually-hidden">Color scheme</legend>
+          <label>
+            <input
+              type="radio"
+              name="color-scheme-choice"
+              value="light"
+              class="visually-hidden"
+            />
+            Light
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="color-scheme-choice"
+              value="light dark"
+              class="visually-hidden"
+              checked
+            />
+            Auto
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="color-scheme-choice"
+              value="dark"
+              class="visually-hidden"
+            />
+            Dark
+          </label>
+        </fieldset>
+      </div>
+    </footer>
+
+    <script src="/2026-fall-mx/scripts/color-scheme.js" type="module"></script>
+  </body>
+</html>

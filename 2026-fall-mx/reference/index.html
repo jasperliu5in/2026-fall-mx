@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Coding Reference: 5IN Experimental Education Institute Taipei</title>
+    <link rel="stylesheet" href="/2026-fall-mx/styles/project.css" />
+    <link rel="stylesheet" href="/2026-fall-mx/styles/shared.css" />
+    <link rel="stylesheet" href="/2026-fall-mx/styles/reference.css" />
+    <link rel="icon" href="/2026-fall-mx/favicon.png" />
+    <meta name="color-scheme" content="light dark" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="center line">
+        <div class="big line">
+          <span class="header__logo">
+            <img src="/2026-fall-mx/images/logo-5in.png" alt="5in" width="80" />
+          </span>
+          <b>5IN</b>
+        </div>
+        <nav class="line">
+          <a href="/2026-fall-mx/">Home</a>
+          <a href="/2026-fall-mx/reference/">Coding Reference</a>
+          <a href="/2026-fall-mx/#students">Students</a>
+          <a href="/2026-fall-mx/#teachers">Teachers</a>
+          <a href="/2026-fall-mx/#github">GitHub accounts</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="center">
+      <nav id="nav" aria-labelledby="reference">
+        <h2 id="reference">Coding Reference</h2>
+        <p>
+          Here is a list of everything the Mixed Grade class has been taught.
+        </p>
+
+        <p>
+          <a href="#html">HTML</a> | <a href="./css.html#nav">CSS</a> |
+          <a href="./javascript.html#nav">JavaScript</a>
+        </p>
+      </nav>
+
+      <h1 id="html">HTML Reference</h1>
+
+      <nav>
+        <ul>
+          <li><a href="#basics">HTML Basics</a></li>
+          <li>
+            Types of HTML elements
+            <ul>
+              <li><a href="#boilerplate">HTML Boilerplate</a></li>
+              <li><a href="#metadata">Document metadata</a></li>
+              <li><a href="#section">Content sections</a></li>
+              <li><a href="#text">Text content</a></li>
+              <li><a href="#inline">Inline text</a></li>
+              <li><a href="#media">Media</a></li>
+              <li><a href="#scripting">Scripting</a></li>
+              <li><a href="#table">Tables</a></li>
+              <li><a href="#form">Forms</a></li>
+            </ul>
+          </li>
+          <li>
+            <strong>More information</strong>: The most useful resource for
+            learning HTML is the
+            <a href="https://developer.mozilla.org/en-US/docs/Web/"
+              >Mozilla Developer Network (MDN)</a
+            >
+            website.
+            <ul>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+                  >Guide for HTML syntax</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements"
+                  >HTML Reference</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <h2 id="basics">HTML Basics</h2>
+
+      <p>
+        HTML consists of a series of elements, which you use to enclose, wrap,
+        or <em>mark up</em> different parts of content to make it appear or act
+        in a certain way. HTML elements are written with "tags", a
+        <code>&lt;</code> symbol, the name of the HTML element, and a
+        <code>&gt;</code> symbol.
+      </p>
+      <p>
+        When one HTML element <em>contains</em> content (like other elements or
+        text), the HTML element’s start tag is before the content and it’s end
+        tag is after the content. The ending tag has a <code>/</code> before the
+        HTML element name. For example, here is a paragraph (p) element:
+      </p>
+      <p>
+        <img
+          src="./grumpy-cat-small.png"
+          alt="A sample code snippet demonstrating the structure of an html element. &lt;p&gt; My cat is very grumpy &lt;/p&gt;"
+          style="width: 50%; min-width: 400px"
+        />
+      </p>
+      <p>
+        An <strong>HTML element</strong> is the opening and closing tags
+        <em>and</em> its content.
+      </p>
+      <p>
+        A HTML element can have attributes. Those attributes are added to
+        opening tag by placing them before the &gt; symbol. For example:
+      </p>
+      <p>
+        <img
+          src="./grumpy-cat-attribute-small.png"
+          alt="paragraph tag with 'class=&quot;editor-note&quot;' attribute emphasized"
+          style="width: 75%; min-width: 400px"
+        />
+      </p>
+
+      <h2 id="boilerplate">HTML Boilerplate</h2>
+
+      <p>These 4 items are required in any well-formed HTML document.</p>
+
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;!-- Metadata elements go here. --&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Document content goes here. --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <dl>
+        <dt id="doctype">
+          <code>&lt;!doctype html&gt;</code> — Document type declaration
+        </dt>
+        <dd>
+          <p>
+            This special tag declares that we are using the modern HTML version
+            and not the old, out-dated “quirks” version of HTML.
+          </p>
+
+          <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/Doctype"
+              >MDN Reference
+              <span class="visually-hidden">for html doctype</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="root">
+          <code>&lt;html&gt; &lt;/html&gt;</code> — Root element
+        </dt>
+        <dd>
+          <p>The root element contains all other HTML elements.</p>
+
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/html"
+              >MDN Reference
+              <span class="visually-hidden">for html element</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="head">
+          <code>&lt;head&gt; &lt;/head&gt;</code> — Document metadata element
+        </dt>
+        <dd>
+          <p>
+            This element contains information <em>related</em> to the document
+            that is not the document’s content, for example, stylesheet links,
+            meta tags, page title, etc.
+          </p>
+
+          <p>This is not to be confused with the &lt;header&gt; element.</p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/head"
+              >MDN Reference <span class="visually-hidden">for head</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="body">
+          <code>&lt;body&gt; &lt;/body&gt;</code> — Body element
+        </dt>
+        <dd>
+          <p>This element contains <em>all</em> the content of the page.</p>
+
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/body"
+              >MDN Reference <span class="visually-hidden">for body</span></a
+            >
+          </p>
+        </dd>
+      </dl>
+
+      <p>
+        <a href="#nav" class="backToTop">Back to top</a>
+      </p>
+
+      <h2 id="metadata">Document metadata</h2>
+
+      <dl>
+        <dt id="title">
+          <code>&lt;title&gt; &lt;/title&gt;</code> — Document title element
+        </dt>
+        <dd>
+          <p>
+            The title of the document is displayed in the web browser's tab.
+          </p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/title"
+              >MDN Reference <span class="visually-hidden">for title</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="style">
+          <code>&lt;style&gt; &lt;/style&gt;</code> — Inline CSS styles element
+        </dt>
+        <dd>
+          <p>
+            This element contains CSS that is applied to the current document.
+          </p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/style"
+              >MDN Reference <span class="visually-hidden">for style</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="link-stylesheet">
+          <code>&lt;link rel="stylesheet" href="some-file.css" /&gt;</code> —
+          CSS stylesheet link element
+        </dt>
+        <dd>
+          <p>This link loads a CSS file to style the web page.</p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link"
+              >MDN Reference <span class="visually-hidden">for link</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="meta-color-scheme">
+          <code>&lt;meta name="color-scheme" content="light dark" /&gt;</code> —
+          Color scheme meta tag
+        </dt>
+        <dd>
+          <p>Tells the browser which color scheme to use.</p>
+          <p>
+            <code>content="dark"</code> means to use dark mode.<br />
+            <code>content="light"</code> means to use light mode.<br />
+            <code>content="light dark"</code> means to use the color scheme
+            currently in-use by the Operating System (Windows, MacOS, Linux,
+            etc.)
+          </p>
+
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme"
+              >MDN Reference
+              <span class="visually-hidden">for meta color-scheme</span></a
+            >
+          </p>
+        </dd>
+      </dl>
+
+      <p>
+        <a href="#nav" class="backToTop">Back to top</a>
+      </p>
+
+      <h2 id="section">Content sections</h2>
+
+      <dl>
+        <dt id="main">
+          <code>&lt;main&gt; &lt;/main&gt;</code> — Main content element
+        </dt>
+        <dd>
+          <p>The main content area contains the central topic of a document.</p>
+
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main"
+              >MDN Reference <span class="visually-hidden">for main</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="header">
+          <code>&lt;header&gt; &lt;/header&gt;</code> — Header element
+        </dt>
+        <dd>
+          <p>
+            The header contains elements that describe the website such as a
+            logo, navigational aids, a search form, an author name, and other
+            elements.
+          </p>
+          <p>Not to be confused with the &lt;head&gt; element.</p>
+
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/header"
+              >MDN Reference <span class="visually-hidden">for header</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="footer">
+          <code>&lt;footer&gt; &lt;/footer&gt;</code> — Footer element
+        </dt>
+        <dd>
+          <p>
+            A footer typically contains information about the author of the
+            section, copyright data or links to related documents.
+          </p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/footer"
+              >MDN Reference <span class="visually-hidden">for footer</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="h1">
+          <code>&lt;h1&gt; &lt;/h1&gt;</code> …
+          <code>&lt;h6&gt; &lt;/h6&gt;</code> — Heading elements
+        </dt>
+        <dd>
+          <p>
+            Headings introduce the text below it. <code>&lt;h1&gt;</code> is the
+            highest (or most important) section level and
+            <code>&lt;h6&gt;</code> is the lowest.
+          </p>
+          <table>
+            <thead>
+              <th scope="col">HTML code</th>
+              <th scope="col">Reason to use</th>
+              <th scope="col">Heading appearance</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  <code>&lt;h1&gt;</code>
+                </th>
+                <td>Page title</td>
+                <td>
+                  <h1>Heading 1</h1>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;h2&gt;</code>
+                </th>
+                <td>Section title of a page</td>
+                <td>
+                  <h2>Heading 2</h2>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;h3&gt;</code>
+                </th>
+                <td>Sub-section title of a <code>&lt;h2&gt;</code></td>
+                <td>
+                  <h3>Heading 3</h3>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;h4&gt;</code>
+                </th>
+                <td>Sub-section title of a <code>&lt;h3&gt;</code></td>
+                <td>
+                  <h4>Heading 4</h4>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;h5&gt;</code>
+                </th>
+                <td>Sub-section title of a <code>&lt;h4&gt;</code></td>
+                <td>
+                  <h5>Heading 5</h5>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;h6&gt;</code>
+                </th>
+                <td>Sub-section title of a <code>&lt;h5&gt;</code></td>
+                <td>
+                  <h6>Heading 6</h6>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements"
+              >MDN Reference <span class="visually-hidden">for h1-h6</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="nav">
+          <code>&lt;nav&gt; &lt;/nav&gt;</code> — Navigation element
+        </dt>
+        <dd>
+          <p>This element contains navigation links.</p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav"
+              >MDN Reference <span class="visually-hidden">for nav</span></a
+            >
+          </p>
+        </dd>
+      </dl>
+
+      <p>
+        <a href="#nav" class="backToTop">Back to top</a>
+      </p>
+
+      <h2 id="text">Text content</h2>
+
+      <dl>
+        <dt id="paragraph">
+          <code>&lt;p&gt; &lt;/p&gt;</code> — Paragraph element
+        </dt>
+        <dd>
+          <p>Text content is often grouped into paragraphs.</p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/p"
+              >MDN Reference
+              <span class="visually-hidden">for p element</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="div">
+          <code>&lt;div&gt; &lt;/div&gt;</code> — Content division element
+        </dt>
+        <dd>
+          <p>
+            This element is a generic container for content. Only use this
+            element if you cannot find a better element for the content and you
+            need to style the content using a <code>class=""</code> attribute.
+          </p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/div"
+              >MDN Reference <span class="visually-hidden">for div</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="figure">
+          <code>&lt;figure&gt; &lt;/figure&gt;</code> — Figure element
+        </dt>
+        <dd>
+          <p>
+            A figure is an image, chart or table that is self-contained content,
+            with an optional caption. The figure, its caption, and its contents
+            are referenced as a single unit within the rest of the document.
+          </p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figure"
+              >MDN Reference <span class="visually-hidden">for figure</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="figcaption">
+          <code>&lt;figcaption&gt; &lt;/figcaption&gt;</code> — Caption element
+          for a <code>&lt;figure&gt;</code>
+        </dt>
+        <dd>
+          <p>
+            This element is a caption or legend describing the rest of the
+            contents of its parent <code>&lt;figure&gt;</code> element.
+          </p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figcaption"
+              >MDN Reference
+              <span class="visually-hidden">for figcaption</span></a
+            >
+          </p>
+        </dd>
+      </dl>
+
+      <p>
+        <a href="#nav" class="backToTop">Back to top</a>
+      </p>
+
+      <h2 id="inline">Inline text</h2>
+
+      <dl>
+        <dt id="a">
+          <code>&lt;a href=""&gt; &lt;/a&gt;</code> — Anchor hyperlink
+        </dt>
+        <dd>
+          <p>
+            This element creates a hyperlink to web pages, files, email
+            addresses, locations in the same page, or anything else a URL can
+            address.
+          </p>
+          <p>
+            If <code>target="_blank"</code> attribute is set, the hyperlink will
+            open in a new browser tab or window.
+          </p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"
+              >MDN Reference <span class="visually-hidden">for anchor</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="b"><code>&lt;b&gt; &lt;/b&gt;</code> — Bold element</dt>
+        <dd>
+          <p>
+            This element is important and shown in <strong>bold</strong> text.
+          </p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/b"
+              >MDN Reference <span class="visually-hidden">for bold</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="i"><code>&lt;i&gt; &lt;/i&gt;</code> — Italic element</dt>
+        <dd>
+          <p>This element is important and shown in <em>italic</em> text.</p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/i"
+              >MDN Reference <span class="visually-hidden">for italic</span></a
+            >
+          </p>
+        </dd>
+      </dl>
+
+      <p>
+        <a href="#nav" class="backToTop">Back to top</a>
+      </p>
+
+      <h2 id="media">Media</h2>
+
+      <dl>
+        <dt id="img">
+          <code>&lt;img src="some-file.jpg" &gt;</code> — Image element
+        </dt>
+        <dd>
+          <p>This element loads an image into the document.</p>
+
+          <p>Supported image types include:</p>
+          <ul>
+            <li><code>.gif</code></li>
+            <li><code>.jpg</code> or <code>.jpeg</code></li>
+            <li><code>.png</code></li>
+            <li><code>.webp</code></li>
+            <li><code>.svg</code></li>
+            <li><code>.avif</code></li>
+            <li><code>.jxl</code></li>
+          </ul>
+
+          <p>
+            If the image is part of the main content of the page, it should be
+            wrapped inside a <code>&lt;figure&gt;</code> element.
+          </p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img"
+              >MDN Reference <span class="visually-hidden">for img</span></a
+            >
+          </p>
+        </dd>
+      </dl>
+
+      <p>
+        <a href="#nav" class="backToTop">Back to top</a>
+      </p>
+
+      <h2 id="scripting">Scripting</h2>
+
+      <dl>
+        <dt id="script">
+          <code
+            >&lt;script src="some-file.js"
+            type="module"&gt;&lt;/script&gt;</code
+          >
+          — JavaScript
+        </dt>
+        <dd>
+          This element adds a JavaScript file to the document. Specifying
+          <code>type="module"</code> ensures that each script doesn’t interfere
+          with each other.
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script"
+              >MDN Reference <span class="visually-hidden">for script</span></a
+            >
+          </p>
+        </dd>
+      </dl>
+
+      <p>
+        <a href="#nav" class="backToTop">Back to top</a>
+      </p>
+
+      <!-- <h2 id="table">Tables</h2>
+
+      <dl></dl>
+      
+      <p>
+        <a href="#nav" class="backToTop">Back to top</a>
+      </p> -->
+
+      <h2 id="form">Forms</h2>
+
+      <dl>
+        <dt id="button">
+          <code>&lt;button&gt; &lt;/button&gt;</code> — Button element
+        </dt>
+        <dd>
+          <p>
+            This element is an interactive element activated by a user using a
+            mouse, keyboard, finger, etc. Once activated, it then performs an
+            action, such as submitting a form or one specified with JavaScript.
+          </p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button"
+              >MDN Reference <span class="visually-hidden">for button</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="input"><code>&lt;input&gt;</code> — Form input</dt>
+        <dd>
+          <p>
+            This element is used to create an interactive field of a form in
+            order to accept data from the user. A wide variety of types of input
+            data and control widgets are available; the type of input is
+            controlled by the <code>type=""</code> attribute.
+          </p>
+
+          <table>
+            <caption>
+              The different types of form input elements
+            </caption>
+            <thead>
+              <th scope="col">HTML code</th>
+              <th scope="col">Form element appearance</th>
+              <th scope="col">Notes</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  <code>&lt;input type="text"&gt;</code>
+                </th>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>The most basic form input</td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;input type="email"&gt;</code>
+                </th>
+                <td>
+                  <input type="email" />
+                </td>
+                <td>
+                  The web browser may verify that it is a valid email address
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;input type="number"&gt;</code>
+                </th>
+                <td>
+                  <input type="number" />
+                </td>
+                <td>Only integers and decimal numbers may be input</td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;input type="password"&gt;</code>
+                </th>
+                <td>
+                  <input type="password" />
+                </td>
+                <td>The input will be hidden as the user types</td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;input type="search"&gt;</code>
+                </th>
+                <td>
+                  <input type="search" />
+                </td>
+                <td>
+                  When text is entered, the browser will show a "clear" button
+                  so the user can easily start a new search
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;input type="tel"&gt;</code>
+                </th>
+                <td>
+                  <input type="tel" />
+                </td>
+                <td>
+                  The web browser may verify that it is a valid phone number
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;input type="checkbox" name=""&gt;</code>
+                </th>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>
+                  Indicates if the option is chosen or not. Multiple checkboxes
+                  can use the same <code>name</code> attribute and more than one
+                  of them can be checked at the same time.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;input type="radio" name=""&gt;</code>
+                </th>
+                <td>
+                  <input type="radio" name="radio-example" />
+                  <input type="radio" name="radio-example" />
+                  <input type="radio" name="radio-example" />
+                </td>
+                <td>
+                  Indicates if the option is chosen or not. Multiple radio
+                  buttons can use the same <code>name</code> attribute but only
+                  one of them can be chosen at any time.
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;input type="color"&gt;</code>
+                </th>
+                <td>
+                  <input type="color" />
+                </td>
+                <td>Allows the user to easily pick a color</td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;input type="date"&gt;</code>
+                </th>
+                <td>
+                  <input type="date" />
+                </td>
+                <td>Allows the user to easily pick a date</td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;input type="file"&gt;</code>
+                </th>
+                <td>
+                  <input type="file" />
+                </td>
+                <td>Allows the user to pick a file from their computer</td>
+              </tr>
+              <tr>
+                <th>
+                  <code>&lt;input type="range"&gt;</code>
+                </th>
+                <td>
+                  <input type="range" />
+                </td>
+                <td>
+                  Allows the user to pick a number from a range of numbers
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input"
+              >MDN Reference <span class="visually-hidden">for input</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="label">
+          <code>&lt;label&gt; &lt;/label&gt;</code> — Form element label
+        </dt>
+        <dd>
+          <p>
+            The label is a caption for a form field
+            (<code>&lt;input&gt;</code>). Clicking on the label will cause the
+            form field it captions to be activated.
+          </p>
+          <p>The label can caption a form field in one of two ways:</p>
+          <ol>
+            <li>
+              <strong>Wrapping</strong>:<br />
+              <p>Wrap the label around the form input element.</p>
+              <pre><code>&lt;label&gt;
+  First name:
+  &lt;input name="firstName" type="text"&gt;
+&lt;/label&gt;</code></pre>
+
+              <label>
+                First name:
+                <input name="firstName" type="text" />
+              </label>
+            </li>
+            <li>
+              <strong>Using the <code>for</code> attribute</strong>:<br />
+              <p>
+                Add a <code>for</code> attribute that uses the
+                <code>id</code> of the form input element.
+              </p>
+              <pre><code>&lt;label for="first"&gt;
+  First name:
+&lt;/label&gt;
+&lt;input id="first" name="firstName" type="text"&gt;
+</code></pre>
+
+              <label for="first"> First name: </label>
+              <input id="first" name="firstName" type="text" />
+            </li>
+          </ol>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label"
+              >MDN Reference <span class="visually-hidden">for label</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="fieldset">
+          <code>&lt;fieldset&gt; &lt;/fieldset&gt;</code> — Set of form fields
+        </dt>
+        <dd>
+          <p>
+            This element groups several form elements together. It should
+            contain a
+            <code>&lt;legend&gt;</code> that captions the group.
+          </p>
+          <pre><code>&lt;fieldset&gt;
+  &lt;legend&gt;Name&lt;/legend&gt;
+  &lt;label&gt;
+    Last:
+    &lt;input name="last" type="text"&gt;
+  &lt;/label&gt;
+  &lt;br /&gt;
+  &lt;label&gt;
+    First:
+    &lt;input name="first" type="text"&gt;
+  &lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+          <fieldset>
+            <legend>Name</legend>
+            <label>
+              Last:
+              <input name="last" type="text" />
+            </label>
+            <br />
+            <label>
+              First:
+              <input name="first" type="text" />
+            </label>
+          </fieldset>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset"
+              >MDN Reference
+              <span class="visually-hidden">for fieldset</span></a
+            >
+          </p>
+        </dd>
+
+        <dt id="legend">
+          <code>&lt;legend&gt; &lt;/legend&gt;</code> — Caption for a fieldset
+        </dt>
+        <dd>
+          This element is a caption for the content of its parent
+          <code>&lt;fieldset&gt;</code>.
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/legend"
+              >MDN Reference <span class="visually-hidden">for legend</span></a
+            >
+          </p>
+        </dd>
+      </dl>
+
+      <!--
+        <dt id=""><code>&lt;tag&gt; &lt;/tag&gt;</code></dt>
+        <dd>
+          <p></p>
+          <p>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/"
+              >MDN Reference <span class="visually-hidden">for tag</span></a
+            >
+          </p>
+        </dd>
+        -->
+
+      <p>
+        <a href="#nav" class="backToTop">Back to top</a>
+      </p>
+    </main>
+    <footer class="footer">
+      <div class="center line">
+        <div>
+          <p>Last updated: 2026 October 5</p>
+          <p>
+            Code:
+            <a href="https://github.com/5in-tw/2026-fall-mixed">GitHub</a>
+          </p>
+        </div>
+
+        <fieldset id="color-chooser" class="color-scheme-chooser">
+          <legend class="visually-hidden">Color scheme</legend>
+          <label>
+            <input
+              type="radio"
+              name="color-scheme-choice"
+              value="light"
+              class="visually-hidden"
+            />
+            Light
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="color-scheme-choice"
+              value="light dark"
+              class="visually-hidden"
+              checked
+            />
+            Auto
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="color-scheme-choice"
+              value="dark"
+              class="visually-hidden"
+            />
+            Dark
+          </label>
+        </fieldset>
+      </div>
+    </footer>
+
+    <script src="/2026-fall-mx/scripts/color-scheme.js" type="module"></script>
+  </body>
+</html>

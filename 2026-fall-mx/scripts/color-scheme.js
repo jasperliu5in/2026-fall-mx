@@ -1,3 +1,4 @@
+// Define the local storage key to use.
 const key = "color-scheme-choice";
 
 // Use Inspector to change meta tag's "content" value.
@@ -10,16 +11,14 @@ function setColorScheme(colorScheme) {
   localStorage.setItem(key, colorScheme);
 }
 
+// Have the fieldset listen for change events that bubble from the radio buttons.
 const chooser = document.getElementById("color-chooser");
-
-// Have the fieldset catch bubbling change events from the radio buttons.
 function changeColors(event) {
   setColorScheme(event.target.value);
 }
-
 chooser.addEventListener("change", changeColors);
 
-// Synchronize the stored color scheme and the page color scheme.
+// When the page first loads, synchronize the stored color scheme with the page.
 const color = localStorage.getItem(key);
 if (color) {
   setColorScheme(color);
