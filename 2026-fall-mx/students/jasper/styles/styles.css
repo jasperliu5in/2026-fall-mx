@@ -26,3 +26,7 @@ footer {
         background-color: purple;
     }
 }
+
+[type]{
+    border: 2px double purple;
+}
